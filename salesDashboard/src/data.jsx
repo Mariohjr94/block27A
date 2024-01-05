@@ -47,6 +47,7 @@ const mockTransactions = [
     date: "2022-04-01",
     cost: "133.45",
   },
+
 ];
 
 export default mockTransactions;

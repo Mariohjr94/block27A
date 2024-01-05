@@ -1,25 +1,27 @@
-import Dashboard from "./components/Dashboard";
+import Sales from "./components/Sales";
 import Menu from "./components/Menu";
+import NewClients from "./components/NewClients";
+import Traffic from "./components/Traffic";
 import Revenue from "./components/Revenue";
 import Transactions from "./components/Transactions";
 import "./index.css";
+
 
 const App = () => {
   return (
     <div> 
       < Menu />
       <div className="cards">
-        < Dashboard />
-        < Dashboard />
-        < Dashboard />
+        < Sales />
+        < NewClients />
+        < Traffic />
       </div>
       <div className="revenue-container">
         < Revenue />
+        < Transactions />
       </div>
-     
-    
-      {/* < Transactions /> */}
     </div>
+  
   )
     
 }

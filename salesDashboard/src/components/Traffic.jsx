@@ -3,22 +3,30 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
-import PointOfSaleIcon from '@mui/icons-material/PointOfSale';
+import TrafficIcon from '@mui/icons-material/Traffic';
 import { useState, useEffect } from 'react';
 
 
-const Revenue = () => {
+const Traffic = () => {
+ 
+  const [clients, setClients] = useState(null);
+
+  useEffect(() => {
+    const allCLients = mockTransactions.length;
+    setClients(allCLients);
+  }, []);
 
 
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
-        <CardContent className='revenue'>
-          <Typography variant="body2" color="text.secondary">
-            Revenue Generated 
-          </Typography>
+        <CardContent className='card'>
+          <TrafficIcon/>
           <Typography gutterBottom variant="h5" component="div">
-            $55,000
+            {clients !== null ? clients : 'Loading...'}
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            Traffic recieved
           </Typography>
         </CardContent>
       </CardActionArea>
@@ -26,4 +34,4 @@ const Revenue = () => {
   );
 }
 
-export default Revenue;
+export default Traffic;
