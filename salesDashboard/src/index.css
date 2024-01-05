@@ -1,0 +1,27 @@
+.cards {
+    width: 70vw;
+    padding: 5rem 1rem 1rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: left;
+   
+}
+
+.card {
+    margin: 2rem;
+    width: 33vw;
+       
+}
+
+.revenue-container{
+    width: 70vw;
+    height: 400px;
+    padding: 1rem;
+    display: flex;
+    justify-content: left;
+}
+
+
+.revenue {
+   width: 100%;
+}

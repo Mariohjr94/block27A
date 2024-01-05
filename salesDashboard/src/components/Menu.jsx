@@ -18,6 +18,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import HomeIcon from '@mui/icons-material/Home';
 import HelpIcon from '@mui/icons-material/Help';
+import Dashboard from './Dashboard';
 
 
 const drawerWidth = 240;
@@ -49,7 +50,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   justifyContent: 'flex-end',
 }));
 
-export default function PersistentDrawerLeft() {
+ const Menu = () =>  {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
@@ -115,7 +116,8 @@ export default function PersistentDrawerLeft() {
         </List>
         <Divider />
       </Drawer>
-      
     </Box>
   );
 }
+
+export default Menu
