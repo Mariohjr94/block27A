@@ -1,46 +1,31 @@
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemText from '@mui/material/ListItemText';
+import Stack from '@mui/material/Stack';
+
+
+
 import mockTransactions from '../data';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
-import { useState, useEffect } from 'react';
-
-
 
 const Transactions = () => {
- 
-    const [transaction, setTransactions] = useState([]);
-   
-    useEffect(() => {
-        const allTransactions = mockTransactions.map((singleTransaction, index) => {
-        return <div key={index}>
-            <Typography variant="body1" gutterBottom>
-                Transaction ID: {singleTransaction.txId}
-                </Typography>
-                <Typography variant="body2">
-                User: {singleTransaction.user}, Date: {singleTransaction.date}, Cost: {singleTransaction.cost}
-            </Typography>
-        </div>
-    });
-    setTransactions(allTransactions);       
-    }, []);
-     console.log(transaction);
   return (
-    <Card>
-      <CardActionArea>
-        <CardContent className='transactions'>
-          <Typography variant="body2" color="text.secondary">
-            All Transactions
-          </Typography>
-         {transaction}
-        </CardContent>
-      </CardActionArea>
-    </Card>
+    <List className='transactionList'>
+      {mockTransactions.map((singleTransaction, index) => (
+        <ListItem key={index} className='transaction' component="div" disablePadding>
+          <ListItemButton className='listItem'>
+            <ListItemText primary={`Transaction ID: ${singleTransaction.txId}`} />
+            <ListItemText primary={`User: ${singleTransaction.user}`} />
+            <ListItemText primary={`Date: ${singleTransaction.date}`} />
+            
+            <ListItemText primary={`Cost: ${singleTransaction.cost}`} />
+            
+          </ListItemButton>
+        </ListItem>
+      ))}
+    </List>
   );
-}
-
+};
 
 export default Transactions;
-
-
 

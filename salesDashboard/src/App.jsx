@@ -3,13 +3,13 @@ import Menu from "./components/Menu";
 import NewClients from "./components/NewClients";
 import Traffic from "./components/Traffic";
 import Revenue from "./components/Revenue";
-import Transactions from "./components/Transactions";
+import Transactions from './components/Transactions';
 import "./index.css";
 
 
 const App = () => {
   return (
-    <div> 
+    <div className="container"> 
       < Menu />
       <div className="cards">
         < Sales />
